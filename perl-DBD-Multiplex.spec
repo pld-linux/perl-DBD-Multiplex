@@ -5,7 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DBD
 %define	pnam	Multiplex
-Summary:	DBD::Multiplex - A multiplexing driver for the DBI.
+Summary:	DBD::Multiplex - A multiplexing driver for the DBI
+Summary(pl):	DBD::Multiplex - sterownik zwielokrotniaj±cy dla DBI
 Name:		perl-DBD-Multiplex
 Version:	1.96
 Release:	0.1
@@ -34,6 +35,25 @@ to all datasources, but read from only from one datasource.
 Alternatively, where a database already supports replication,
 DBD::Multiplex can be used to direct writes to the master and spread
 the selects across multiple slaves.
+
+%description -l pl
+DBD::Multiplex to modu³ Perla, który wspó³pracuje z DBI pozwalaj±c
+pracowaæ z wieloma ¼ród³ami danych przy u¿yciu pojedynczego uchwytu
+DBI.
+
+Zasadniczo baza danych i uchwyty rozkazów DBD::Multiplex s± rodzicami
+zawieraj±cymi wiele uchwytów potomnych, po jednym dla ka¿dego ¼ród³a
+danych. Wywo³ania metod w g³ównym uchwycie wyzwalaj± odpowiednie
+wywo³ania metod w ka¿dym z potomków.
+
+Jedno z zastosowañ tego modu³u to mirroring zawarto¶ci jednego
+¼ród³a danych przy u¿yciu zbioru alternatywnych ¼róde³. W tym
+scenariuszu mo¿na zapisywaæ do wszystkich ¼róde³ danych, ale czytaæ
+tylko z jednego ¼ród³a.
+
+Alternatywnie, je¶li baza danych ju¿ obs³uguje replikacjê,
+DBD::Multiplex mo¿e s³u¿yæ do bezpo¶redniego zapisu do g³ównej bazy i
+rozprowadzania zapytañ po wielu bazach podrzêdnych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
