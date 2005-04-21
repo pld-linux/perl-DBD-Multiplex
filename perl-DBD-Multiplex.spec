@@ -65,4 +65,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes
 %{perl_vendorlib}/DBD/*.pm
 %{_mandir}/man3/*
-%{_examplesdir}/%{name}-%{version}/*.pl
+%{_examplesdir}/%{name}-%{version}
