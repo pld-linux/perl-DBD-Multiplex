@@ -83,6 +83,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes
-%{perl_vendorlib}/%{pdir}/*.pm
+%{perl_vendorlib}/DBD/*.pm
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
