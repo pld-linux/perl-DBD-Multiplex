@@ -9,7 +9,7 @@ Summary:	DBD::Multiplex - A multiplexing driver for the DBI
 Summary(pl):	DBD::Multiplex - sterownik zwielokrotniaj±cy dla DBI
 Name:		perl-DBD-Multiplex
 Version:	1.96
-Release:	0.1
+Release:	0.2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -83,6 +83,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes
-%{perl_vendorlib}/DBD/*.pm
+%{perl_vendorlib}/%{pdir}/*.pm
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
