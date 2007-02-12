@@ -6,7 +6,7 @@
 %define	pdir	DBD
 %define	pnam	Multiplex
 Summary:	DBD::Multiplex - A multiplexing driver for the DBI
-Summary(pl):	DBD::Multiplex - sterownik zwielokrotniaj±cy dla DBI
+Summary(pl.UTF-8):   DBD::Multiplex - sterownik zwielokrotniajÄ…cy dla DBI
 Name:		perl-DBD-Multiplex
 Version:	1.96
 Release:	0.2
@@ -36,24 +36,24 @@ Alternatively, where a database already supports replication,
 DBD::Multiplex can be used to direct writes to the master and spread
 the selects across multiple slaves.
 
-%description -l pl
-DBD::Multiplex to modu³ Perla, który wspó³pracuje z DBI pozwalaj±c
-pracowaæ z wieloma ¼ród³ami danych przy u¿yciu pojedynczego uchwytu
+%description -l pl.UTF-8
+DBD::Multiplex to moduÅ‚ Perla, ktÃ³ry wspÃ³Å‚pracuje z DBI pozwalajÄ…c
+pracowaÄ‡ z wieloma ÅºrÃ³dÅ‚ami danych przy uÅ¼yciu pojedynczego uchwytu
 DBI.
 
-Zasadniczo baza danych i uchwyty rozkazów DBD::Multiplex s± rodzicami
-zawieraj±cymi wiele uchwytów potomnych, po jednym dla ka¿dego ¼ród³a
-danych. Wywo³ania metod w g³ównym uchwycie wyzwalaj± odpowiednie
-wywo³ania metod w ka¿dym z potomków.
+Zasadniczo baza danych i uchwyty rozkazÃ³w DBD::Multiplex sÄ… rodzicami
+zawierajÄ…cymi wiele uchwytÃ³w potomnych, po jednym dla kaÅ¼dego ÅºrÃ³dÅ‚a
+danych. WywoÅ‚ania metod w gÅ‚Ã³wnym uchwycie wyzwalajÄ… odpowiednie
+wywoÅ‚ania metod w kaÅ¼dym z potomkÃ³w.
 
-Jedno z zastosowañ tego modu³u to mirroring zawarto¶ci jednego
-¼ród³a danych przy u¿yciu zbioru alternatywnych ¼róde³. W tym
-scenariuszu mo¿na zapisywaæ do wszystkich ¼róde³ danych, ale czytaæ
-tylko z jednego ¼ród³a.
+Jedno z zastosowaÅ„ tego moduÅ‚u to mirroring zawartoÅ›ci jednego
+ÅºrÃ³dÅ‚a danych przy uÅ¼yciu zbioru alternatywnych ÅºrÃ³deÅ‚. W tym
+scenariuszu moÅ¼na zapisywaÄ‡ do wszystkich ÅºrÃ³deÅ‚ danych, ale czytaÄ‡
+tylko z jednego ÅºrÃ³dÅ‚a.
 
-Alternatywnie, je¶li baza danych ju¿ obs³uguje replikacjê,
-DBD::Multiplex mo¿e s³u¿yæ do bezpo¶redniego zapisu do g³ównej bazy i
-rozprowadzania zapytañ po wielu bazach podrzêdnych.
+Alternatywnie, jeÅ›li baza danych juÅ¼ obsÅ‚uguje replikacjÄ™,
+DBD::Multiplex moÅ¼e sÅ‚uÅ¼yÄ‡ do bezpoÅ›redniego zapisu do gÅ‚Ã³wnej bazy i
+rozprowadzania zapytaÅ„ po wielu bazach podrzÄ™dnych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
