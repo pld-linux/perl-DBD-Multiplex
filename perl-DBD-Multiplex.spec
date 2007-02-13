@@ -6,7 +6,7 @@
 %define	pdir	DBD
 %define	pnam	Multiplex
 Summary:	DBD::Multiplex - A multiplexing driver for the DBI
-Summary(pl.UTF-8):   DBD::Multiplex - sterownik zwielokrotniający dla DBI
+Summary(pl.UTF-8):	DBD::Multiplex - sterownik zwielokrotniający dla DBI
 Name:		perl-DBD-Multiplex
 Version:	1.96
 Release:	0.2
