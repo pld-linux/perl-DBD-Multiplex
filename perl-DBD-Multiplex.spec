@@ -8,12 +8,12 @@
 Summary:	DBD::Multiplex - A multiplexing driver for the DBI
 Summary(pl.UTF-8):	DBD::Multiplex - sterownik zwielokrotniający dla DBI
 Name:		perl-DBD-Multiplex
-Version:	2.04
-Release:	0.2
+Version:	2.09
+Release:	0.1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ae74135f0d30cda54bd0665dccbb1158
+# Source0-md5:	d4ef5dfb1b5212aef5b5aca3fbed1eb7
 URL:		http://search.cpan.org/dist/DBD-Multiplex/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -47,17 +47,17 @@ zawierającymi wiele uchwytów potomnych, po jednym dla każdego źródła
 danych. Wywołania metod w głównym uchwycie wyzwalają odpowiednie
 wywołania metod w każdym z potomków.
 
-Jedno z zastosowań tego modułu to mirroring zawartości jednego
-źródła danych przy użyciu zbioru alternatywnych źródeł. W tym
-scenariuszu można zapisywać do wszystkich źródeł danych, ale czytać
-tylko z jednego źródła.
+Jedno z zastosowań tego modułu to mirroring zawartości jednego źródła
+danych przy użyciu zbioru alternatywnych źródeł. W tym scenariuszu
+można zapisywać do wszystkich źródeł danych, ale czytać tylko z
+jednego źródła.
 
 Alternatywnie, jeśli baza danych już obsługuje replikację,
 DBD::Multiplex może służyć do bezpośredniego zapisu do głównej bazy i
 rozprowadzania zapytań po wielu bazach podrzędnych.
 
 %prep
-%setup -q -n %{pdir}-%{pnam}-%{version}
+%setup -q -n %{pdir}-%{pnam}
 
 %build
 %{__perl} Makefile.PL \
@@ -75,8 +75,6 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 rm -f $RPM_BUILD_ROOT%{perl_archlib}/perllocal.pod
 rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/%{pdir}/%{pnam}/.packlist
-
-mv $RPM_BUILD_ROOT{%{perl_vendorlib}/%{pdir}/example.pl,%{_examplesdir}/%{name}-%{version}}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
